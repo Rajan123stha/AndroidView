@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AndroidView</string>
+    <string name="name">Name:</string>
+    <string name="enter_name">Enter name...</string>
+    <string name="age">Age:</string>
+    <string name="enter_age">Enter Age...</string>
+    <string name="occupation">Occupation:</string>
+    <string name="occupations">Occupation...</string>
+    <string name="address">Address:</string>
+    <string name="enter_address">Enter Address...</string>
+    <string name="add_to_list">Add to List</string>
+    <string name="listview">ListView</string>
+    <string name="gridview">GridView</string>
+    <string name="recycleview">RecycleView</string>
+</resources>
