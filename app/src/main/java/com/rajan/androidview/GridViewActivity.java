@@ -19,6 +19,7 @@ public class GridViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grid_view);
+
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
         int age = intent.getIntExtra("age", 12);
@@ -31,5 +32,7 @@ public class GridViewActivity extends AppCompatActivity {
         GridViewAdapter gridViewAdapter=new GridViewAdapter(GridViewActivity.this,listOfPerson);
 
         gridView.setAdapter(gridViewAdapter);
+
+
     }
 }

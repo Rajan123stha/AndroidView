@@ -1,5 +1,6 @@
 package com.rajan.androidview;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,6 +34,7 @@ public class ListViewAdapter extends BaseAdapter {
         return position;
     }
 
+    @SuppressLint("DefaultLocale")
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
@@ -44,10 +46,10 @@ public class ListViewAdapter extends BaseAdapter {
         TextView occupationTextView = convertView.findViewById(R.id.occupationTextView);
         TextView addressTextView = convertView.findViewById(R.id.addressTextView);
 
-        nameTextView.setText(personObjects.get(position).getName());
-        ageTextView.setText(String.valueOf(personObjects.get(position).getAge()));
-        occupationTextView.setText(personObjects.get(position).getOccupation());
-        addressTextView.setText(personObjects.get(position).getAddress());
+        nameTextView.setText(String.format("Name: %s", personObjects.get(position).getName()));
+        ageTextView.setText(String.format("Age: %d", personObjects.get(position).getAge()));
+        occupationTextView.setText(String.format("Occupation: %s", personObjects.get(position).getOccupation()));
+        addressTextView.setText(String.format("Address: %s", personObjects.get(position).getAddress()));
 
         return convertView;
     }
